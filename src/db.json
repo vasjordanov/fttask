@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "role": "Admin",
+      "name": "Vasil",
+      "email": "harry92_dd@abv.bg",
+      "isToggled": true
+    },
+    {
+      "id": 2,
+      "role": "Admin",
+      "name": "Mitko",
+      "email": "harry9454_dd@abv.bg",
+      "isToggled": true
+    },
+    {
+      "email": "han_solo90@abv.bg",
+      "role": "User",
+      "id": "291227d3-6796-42b4-9b11-821abbb00ba8",
+      "isToggled": true
+    }
+  ]
+}

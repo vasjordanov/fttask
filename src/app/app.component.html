@@ -1,0 +1,2 @@
+<app-user-form [roles]='roles' (add)="onInvitationButtonClicked($event)"></app-user-form>
+<app-users-list *ngIf="users$ | async as users" [usersList]='users' (delete)="onDeleteUserButtonClicked($event)" (update)="onUserUpdate($event)"></app-users-list>

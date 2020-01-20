@@ -1,0 +1,16 @@
+<input  placeholder="Search for ..."/>
+<div *ngFor="let user of usersList" class="row border">
+    <div class="col-3 border">
+        <div>{{user.name}}</div>
+        <small>{{user.email}}</small>
+    </div>
+    <div class="col-3 border"> 
+        {{user.role}}
+    </div>
+    <div class="col-3 border">
+        <button class="btn btn-secondary" (click)="onDeleteButtonClicked(user)">delete</button>
+    </div>
+    <div class="col-3 border"> 
+        <input type="checkbox" [checked]="user.isToggled" (click)="updateToggleStatus(user)">
+     </div>
+</div>

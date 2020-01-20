@@ -1,0 +1,25 @@
+<form [formGroup]="form" novalidate>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName='email' class="form-control">
+        <small *ngIf="form.get('email').errors?.required && form.get('email').touched" style="color: red">
+            Email is required
+        </small>
+        <small *ngIf="form.get('email').errors?.email && form.get('email').touched" style="color: red">
+            Email is not valid
+        </small>
+    </div>
+    <div class="form-group">
+        <label>Role</label>
+        <select formControlName='role' class="form-control" placeholder='Select role'>
+            <option></option>
+            <option *ngFor="let role of roles">{{role}}</option>
+        </select> 
+        <small *ngIf="form.get('role').errors?.required && form.get('role').touched" style="color: red">
+            Role is required
+        </small>  
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="button" (click)="onSendInvitationButtonClicked()">Send invitation</button>
+    </div>
+</form>
